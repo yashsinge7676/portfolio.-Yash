@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">YASH</div>
+        <div class="titles">
+
+            <li onclick="showContent('Hi, Im Yash, an engineering student passionate about Web Development.<br>I specialize in creating modern, responsive, and user-friendly websites<br>a focus on clean design and smooth user experience.')">
+                home</li>
+            <div class="search"> <input type="text" placeholder="search"> </div>
+            <li
+                onclick="showContent('My Skills:Frontend: HTML, CSS, JavaScript, React.js<br>Backend: Node.js, Express.js, MongoDB<br>Tools & Platforms: GitHub, VS Code, Firebase<br>Other: Problem-solving, UI/UX design basics')">
+                skills</li>
+            <li onclick="showResume()">resume</li>
+            
+            <li
+                onclick="showContent('Services I Provide:Web Development: Full-stack website development from scratch<br>Responsive Design: Mobile-friendly, fast, and SEO-optimized websites<br>Portfolio/Resume Websites: Helping individuals showcase their skills online<br>Debugging & Support: Fixing errors and improving performance')">
+                services</li>
+            <li
+                onclick="showContent('Contact me at: 📍 Bengaluru, India<br>📧 Email: yash@example.com<br>📱 Phone: +91-98765-43210<br>🌐 LinkedIn: linkedin.com/in/yash<br>💻 GitHub: github.com/yash')">
+                contact</li>
+        </div>
+        <div class="links"> <a href="https://www.instagram.com/7697.yash?igsh=MXAwOTNjeTBoZ2luZw=="> _<i
+                    class="fa-brands fa-instagram"></i> </a> <a href="https://github.com/yashsinge7676"> _<i
+                    class="fa-brands fa-github"></i> </a> <a href="www.linkedin.com/in/yash-sigh-6b05a4370"> _<i
+                    class="fa-brands fa-linkedin"></i> </a> </div>
+    </nav>
+    <main>
+        <div class="box1" id="box1">
+            <h3>Click on menu items to see content here 👆</h3>
+        </div>
+        <div class="box2"> <img src="OIP-removebg-preview.png"> </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>We provide the best web solutions for your business. Building modern, fast, and user-friendly
+                    websites. </p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">about us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Email:aiwithyash@gmail.com.com</p>
+                <p>Phone: +91 xxxxxxxxxx</p>
+                <p>Address: Bengaluru, India</p>
+            </div>
+            <div class="footer-col">
+                <h3>social-media</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/7697.yash?igsh=MXAwOTNjeTBoZ2luZw==">instagram</a></li>
+                    <li><a href="https://github.com/yashsinge7676">github</a></li>
+                    <li><a href="www.linkedin.com/in/yash-sigh-6b05a4370">linkedin</a></li>
+                    <li><a href="#">facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="footer-bottom">&copy; 2025 YourWebsiteName. All rights reserved.</p>
+    </footer>
+    <script> function showContent(text) {
+         document.getElementById("box1").innerHTML = "<p>" + text + "</p>";
+
+     } 
+    
+        function showResume() {
+            document.getElementById("box1").innerHTML =
+                '<img src="resume.png" alt="Resume Image">';
+        }
+    </script>
+</body>
+</html> 
