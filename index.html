@@ -4,130 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Resume Box</title>
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-
-<body>
     <style>
-        body{
-    margin: 0%;
-    padding: 0%;
-    width: 95%;
-margin-left: 40px;
-    align-items: center;
-    justify-content: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    color: rgb(255, 255, 255);
-    background-color: rgb(172, 166, 166);
-    height: 50px;
-    margin-top: 10PX;
-    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
 }
 
-.logo{
+nav {
     display: flex;
-    width:90px;
-    height:inherit;
-    color: black;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: #fff;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+nav .logo {
+    font-size: 1.5rem;
     font-weight: bold;
-    border-radius:20%;
-    border: 30px;
-    align-items: center;
-    justify-content: center;
-    align-content: flex-start;
-    background-color: rgb(184, 179, 179);
 }
 
-.titles,li{
+nav .titles {
     display: flex;
-    width: 60%;
-    justify-content: center;
-    align-items: center;
-    color: rgb(0, 0, 0);
+    list-style: none;
+    gap: 15px;
 }
 
-.search,input{
-    border-radius:30px ;
-    color: azure;
-background-color: rgb(149, 157, 157);
-width:200px;
-
+nav .titles li {
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: 0.3s;
 }
 
-button{
+nav .titles li:hover {
+    background: #444;
+    border-radius: 5px;
+}
+
+.search input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+main {
     display: flex;
-    width: 150px;
-    border-radius:60px;
-    text-align: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
 }
 
-.links,i{
-color: black;
-width: 15%;
-
-}
-
-main{
+#box1 {
     display: flex;
+    flex: 1 1 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
+}
+
+#box1 img {
+    max-width: 90%;
+    max-height:400px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.box2 img {
+    max-width: 400px;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    height: inherit;
-    color: black;
-    /*background-color: rgb(176, 173, 173);*/
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    margin: top 0; 
-
-}
-
-.box1{
-    width: 60%;
-    height: 500px;
-    color: black;
- /*background-color: rgb(171, 168, 170);
-*/
-}
-
-.box2,img{
-    width:auto;
-    color:50%;
-    height: 500px;
-    background-repeat: no-repeat;
+    height: auto;
+    border-radius: 10px;
 }
 
 footer {
-    color: #000000;
-    padding: 40px 20px;
-    background-color: rgb(172, 166, 166);
+    background: #222;
+    color: #fff;
+    padding: 30px 20px;
+    margin-top:0px;
 }
 
 .footer-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    max-width: 1200px;
-    margin: auto;
 }
 
 .footer-col h3 {
     margin-bottom: 10px;
-    color: #000000;
-}
-
-.footer-col p,
-.footer-col a,
-.footer-col li {
-    color: #000000;
-    font-size: 14px;
-    line-height: 1.6;
 }
 
 .footer-col ul {
@@ -135,57 +119,153 @@ footer {
     padding: 0;
 }
 
-.footer-col a {
+.footer-col ul li {
+    margin: 5px 0;
+}
+
+.footer-col ul li a {
+    color: #ddd;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
-.footer-col a:hover {
-    color: #000000;
-}
-
-footer hr {
-    margin: 10px 0;
-    border: 0.5px solid #444;
+.footer-col ul li a:hover {
+    color: #fff;
 }
 
 .footer-bottom {
     text-align: center;
-    color: #000000;
-    font-size: 13px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #bbb;
 }
 
+
+@media (max-width: 992px) {
+    nav .titles {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box2 img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav .titles {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .box2 img {
+        max-width: 250px;
+    }
+}
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav .titles {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+
+    nav .titles.show {
+        display: flex;
+    }
+
+    nav .titles li {
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid #333;
+    }
+
+    nav .search {
+        margin: 10px auto;
+    }
+}
+        
     </style>
+</head>
+
+<body>
     <nav>
         <div class="logo">YASH</div>
-        <div class="titles">
-
-            <li onclick="showContent('Hi, Im Yash, an engineering student passionate about Web Development.<br>I specialize in creating modern, responsive, and user-friendly websites<br>a focus on clean design and smooth user experience.')">
-                home</li>
-            <div class="search"> <input type="text" placeholder="search"> </div>
+    
+        <!-- Hamburger icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <!-- Menu items -->
+        <ul class="titles" id="navMenu">
             <li
-                onclick="showContent('My Skills:Frontend: HTML, CSS, JavaScript, React.js<br>Backend: Node.js, Express.js, MongoDB<br>Tools & Platforms: GitHub, VS Code, Firebase<br>Other: Problem-solving, UI/UX design basics')">
+                onclick="showContent('Hi, I\'m Yash, an engineering student passionate about Web Development.<br>I specialize in creating modern, responsive, and user-friendly websites with a focus on clean design and smooth user experience.')">
+                home</li>
+    
+            <div class="search">
+                <input type="text" placeholder="search">
+            </div>
+    
+            <li
+                onclick="showContent('My Skills:<br>Frontend: HTML, CSS, JavaScript, React.js<br>Backend: Node.js, Express.js, MongoDB<br>Tools: GitHub, VS Code, Firebase<br>Other: UI/UX basics')">
                 skills</li>
             <li onclick="showResume()">resume</li>
-            
             <li
-                onclick="showContent('Services I Provide:Web Development: Full-stack website development from scratch<br>Responsive Design: Mobile-friendly, fast, and SEO-optimized websites<br>Portfolio/Resume Websites: Helping individuals showcase their skills online<br>Debugging & Support: Fixing errors and improving performance')">
+                onclick="showContent('Services I Provide:<br>Full-stack web dev<br>Responsive design<br>Portfolio sites<br>Debugging & support')">
                 services</li>
             <li
-                onclick="showContent('Contact me at: 📍 Bengaluru, India<br>📧 Email: yash@example.com<br>📱 Phone: +91-98765-43210<br>🌐 LinkedIn: linkedin.com/in/yash<br>💻 GitHub: github.com/yash')">
+                onclick="showContent('📍 Bengaluru, India<br>📧 yash@example.com<br>📱 +91-98765-43210<br>🌐 LinkedIn: linkedin.com/in/yash<br>💻 GitHub: github.com/yash')">
                 contact</li>
-        </div>
-        <div class="links"> <a href="https://www.instagram.com/7697.yash?igsh=MXAwOTNjeTBoZ2luZw=="> _<i
-                    class="fa-brands fa-instagram"></i> </a> <a href="https://github.com/yashsinge7676"> _<i
-                    class="fa-brands fa-github"></i> </a> <a href="www.linkedin.com/in/yash-sigh-6b05a4370"> _<i
-                    class="fa-brands fa-linkedin"></i> </a> </div>
+        </ul>
     </nav>
+      
     <main>
         <div class="box1" id="box1">
             <h3>Click on menu items to see content here 👆</h3>
         </div>
-        <div class="box2"> <img src="OIP-removebg-preview.png"> </div>
+        <div class="box2"> <img src="ASSETS/OIP.png"> </div>
     </main>
+
+
     <footer>
         <div class="footer-container">
             <div class="footer-col">
@@ -222,16 +302,23 @@ footer hr {
         <hr>
         <p class="footer-bottom">&copy; 2025 YourWebsiteName. All rights reserved.</p>
     </footer>
-    <script> function showContent(text) {
-         document.getElementById("box1").innerHTML = "<p>" + text + "</p>";
 
-     } 
-    
-        function showResume() {
-            document.getElementById("box1").innerHTML =
-                '<img src="resume.png" alt="Resume Image">';
+    <script>
+
+         function showContent(text) {
+        document.getElementById("box1").innerHTML = "<p>" + text + "</p>";
+
+    }
+
+    function showResume() {
+        document.getElementById("box1").innerHTML =
+            '<img src="ASSETS/resume.png" alt="Resume Image">';
+    }
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("show");
         }
     </script>
+      
 </body>
 
-</html> 
+</html>
